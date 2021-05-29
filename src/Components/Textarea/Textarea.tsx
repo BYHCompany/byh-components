@@ -37,7 +37,7 @@ export const Textarea: React.FC<TextareaProps> = ({
         fontSize={fontSize}
         value={inputValue}
         inputHeight={inputLength === 0 ? height : inputHeight}
-        onInput={(e) => userInput(e)}
+        onInput={(e: React.FormEvent<HTMLTextAreaElement>) => userInput(e)}
         placeholderColor={placeholderColor}
         placeholder={placeholder}
       />
