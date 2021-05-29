@@ -17,7 +17,7 @@
     "build": "rm -rf lib/ && rollup -c",
     "test": "jest --env=jsdom",
     "sb": "start-storybook -p 6006",
-    "build-sb": "rm -rf build-docks/ && build-storybook -o docs",
+    "build-storybook": "build-storybook -o docs",
     "coverage": "jest --coverage --watchAll --env=jsdom",
     "predeploy": "npm run build-storybook"
   },
