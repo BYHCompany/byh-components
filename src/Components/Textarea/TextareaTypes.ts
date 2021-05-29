@@ -1,5 +1,5 @@
 export type Variant = 'primary' | 'default';
-export interface TextareaProps {
+export interface TextareaProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Variant sets common style of textarea
    */

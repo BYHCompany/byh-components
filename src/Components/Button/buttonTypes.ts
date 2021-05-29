@@ -1,6 +1,6 @@
 import { colorVariant } from '../Title/titleType';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Right and Left Padding of button.
    */

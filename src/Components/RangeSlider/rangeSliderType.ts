@@ -1,4 +1,4 @@
-export interface RangeSliderProps {
+export interface RangeSliderProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Min Value of slider
    */

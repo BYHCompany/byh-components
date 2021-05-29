@@ -3,7 +3,7 @@ export type StepperElement = {
   value: string;
 };
 
-export interface StepperProps {
+export interface StepperProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * All elements sets count of unchecked steps - array: [{id: 'string', value: 'string'}, ...]
    */

@@ -1,4 +1,4 @@
-export interface PaperProps {
+export interface PaperProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Height of paper, if (!height) height = 100%, if (!!maxHeight) height = 100%
    */
