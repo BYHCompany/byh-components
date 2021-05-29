@@ -61,6 +61,10 @@ export interface InputProps {
    * Sets props to "div" element of all input
    */
   inputBlockProps?: {};
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 // Types for styled components

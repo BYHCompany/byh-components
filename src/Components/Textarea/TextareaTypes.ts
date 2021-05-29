@@ -36,6 +36,10 @@ export interface TextareaProps {
    * On Input callback may be used as custom callback
    */
   onInput: (e: React.FormEvent<HTMLTextAreaElement>) => void;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 export interface TextAreaWrapperProps extends React.ComponentPropsWithoutRef<'div'> {
   variant: 'primary' | 'default';

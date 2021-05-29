@@ -27,6 +27,10 @@ export interface PaperProps {
    *boxShadow of paper,
    */
   boxShadow?: boolean;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface PaperWrapperProps extends React.ComponentPropsWithoutRef<'div'> {

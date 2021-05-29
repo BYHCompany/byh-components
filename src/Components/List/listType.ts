@@ -20,6 +20,10 @@ export interface ListProps {
    *Distance Between each list item
    */
   distanceBetweenLi?: number;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface ListItemProps extends React.ComponentPropsWithoutRef<'li'> {

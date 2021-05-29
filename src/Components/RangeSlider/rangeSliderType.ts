@@ -7,6 +7,12 @@ export interface RangeSliderProps {
    * Max Value of slider
    */
   max: number;
-
+  /**
+   * Allows to set custom callback that gets like arg: (minVal: number, maxVal: number)
+   */
   callback: (minVal: number, maxVal: number) => void;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }

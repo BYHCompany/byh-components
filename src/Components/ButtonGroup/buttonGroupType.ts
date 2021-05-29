@@ -39,6 +39,10 @@ export type ButtonGroupProps = {
    custom callback. return string value of selected button, if value from button not selected return label
    */
   callback: (value: buttonDif) => void;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 };
 
 export interface ButtonWrapperProps extends React.ComponentPropsWithoutRef<'div'> {

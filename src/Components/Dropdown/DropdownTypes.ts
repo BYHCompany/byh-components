@@ -49,6 +49,10 @@ export interface DropdownProps {
    * Custom callback that gets like argument - { id: string, value: string, label: string }
    */
   callback: (item: ItemType) => void;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface DIVProps extends React.ComponentPropsWithoutRef<'div'> {

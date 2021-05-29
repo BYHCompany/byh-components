@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoCheckmarkDone } from 'react-icons/io5';
+import { Alert } from '../..';
 import { Button } from '../Button/Button';
 import { StepperWrapper } from './Elements';
 import { StepperProps } from './StepperTypes';
@@ -12,6 +13,7 @@ export const Stepper: React.FC<StepperProps> = ({
   customStepBorderRadius = '3px',
   fullWidth = false,
   distanceBetweenSteps = 10,
+  ...props
 }): React.ReactElement => {
   let allValues: string[] = [];
   let doneValues: string[] = [];
@@ -49,7 +51,11 @@ export const Stepper: React.FC<StepperProps> = ({
   }, []);
 
   return (
-    <StepperWrapper data-testid="stepperWrapper" fullWidth={fullWidth} maxWidth={maxWidth}>
+    <StepperWrapper
+      {...props}
+      data-testid="stepperWrapper"
+      fullWidth={fullWidth}
+      maxWidth={maxWidth}>
       {allElements.map((elem) => {
         j++;
         return (
