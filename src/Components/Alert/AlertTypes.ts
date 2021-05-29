@@ -1,6 +1,6 @@
 type AlertVariant = 'success' | 'warning' | 'danger';
 
-export interface AlertTypes {
+export interface AlertTypes extends React.HTMLAttributes<HTMLElement> {
   /**
    * Variant property sets common alert style ('success' | 'warning' | 'danger')
    */
