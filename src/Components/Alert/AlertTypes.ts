@@ -29,6 +29,10 @@ export interface AlertTypes {
    * This property sets custom icon if you want change default icon
    */
   customIcon?: React.ReactNode;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface AlertWrapperProps extends React.ComponentPropsWithoutRef<'div'> {

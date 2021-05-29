@@ -16,6 +16,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   variant = 'default',
   itemsScrollHeight = 300,
   callback,
+  ...props
 }) => {
   const [visible, setVisible] = useState(false);
   const [currentElem, setCurrentElem] = useState<string>();
@@ -42,7 +43,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <DIV width={width}>
+    <DIV {...props} width={width}>
       <LabelDiv
         customBorder={customBorder}
         isItemsVisible={visible}

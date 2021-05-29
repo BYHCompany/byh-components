@@ -3,7 +3,7 @@ import React from 'react';
 import { CheckboxContainer, HiddenCheckbox, Icon, StyledCheckbox } from './CheckBoxElement';
 import { CheckBoxProps } from './checkboxType';
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ callback, height, width }) => {
+export const CheckBox: React.FC<CheckBoxProps> = ({ callback, height, width, ...props }) => {
   const [checked, setChecked] = React.useState<boolean>(false);
 
   const onChangeHandler = () => {

@@ -18,6 +18,7 @@ export const Input: React.FC<InputProps> = ({
   callback,
   inputFieldProps,
   inputBlockProps,
+  ...props
 }): React.ReactElement => {
   const [inputValue, setInputValue] = useState<string>(value ? value : '');
 
@@ -28,6 +29,7 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <InputArea
+      {...props}
       fullwidth={fullwidth}
       variant={variant}
       width={width}

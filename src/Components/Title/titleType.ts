@@ -20,6 +20,10 @@ export type TitleProps = {
    */
   fontWeight?: number;
   customVariantColor?: string;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 };
 
 export interface TitleWrapperPros extends React.ComponentPropsWithoutRef<'div'> {
