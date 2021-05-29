@@ -73,7 +73,7 @@ export const Item = styled.li<LiProps>`
   cursor: pointer;
 
   &:hover {
-    background-color: #ffffff;
+    background-color: red;
   }
 `;
 
