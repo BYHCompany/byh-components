@@ -2,16 +2,24 @@
   "name": "byh-components",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "homepage": "http://BYHCompany.github.io/byh-components",
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
   "scripts": {
+    "build": "rm -rf lib/ && rollup -c",
     "test": "jest --env=jsdom",
     "sb": "start-storybook -p 6006",
-    "build-sb": "build-storybook",
-    "coverage": "jest --coverage --watchAll --env=jsdom"
+    "build-sb": "rm -rf build/ && build-storybook -o docs",
+    "coverage": "jest --coverage --watchAll --env=jsdom",
+    "predeploy": "npm run build-storybook"
   },
   "author": "",
   "license": "ISC",
@@ -21,22 +29,38 @@
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
+    "@types/gh-pages": "^3.0.0",
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.8",
+    "@types/rollup": "^0.54.0",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.0",
+    "@types/rollup-plugin-postcss": "^3.1.4",
+    "@types/storybook__react": "^5.2.1",
+    "@types/styled-components": "^5.1.9",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^3.2.0",
     "jest": "^27.0.1",
+    "postcss": "^8.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "rollup": "^2.50.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "storybook-addon-react-docgen": "^1.2.42",
     "styled-components": "^5.3.0",
-    "typescript": "^4.3.2"
+    "typescript": "4.2.4"
   },
   "babel": {
     "presets": [
