@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
-  "homepage": "http://BYHCompany.github.io/byh-components",
+  "homepage": "https://byhcompany.github.io/byh-components/",
   "files": [
     "lib"
   ],
@@ -17,7 +17,7 @@
     "build": "rm -rf lib/ && rollup -c",
     "test": "jest --env=jsdom",
     "sb": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
+    "build-storybook": "build-storybook -o docs-build",
     "coverage": "jest --coverage --watchAll --env=jsdom",
     "predeploy": "npm run build-storybook"
   },
