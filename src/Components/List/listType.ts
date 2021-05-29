@@ -3,7 +3,7 @@ export type ListContent = {
   id: string;
 };
 
-export interface ListProps {
+export interface ListProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Array of objects comprising name: string (name of each list item) id: string
    */
@@ -20,6 +20,10 @@ export interface ListProps {
    *Distance Between each list item
    */
   distanceBetweenLi?: number;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface ListItemProps extends React.ComponentPropsWithoutRef<'li'> {

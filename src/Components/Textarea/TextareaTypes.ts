@@ -1,5 +1,5 @@
 export type Variant = 'primary' | 'default';
-export interface TextareaProps {
+export interface TextareaProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Variant sets common style of textarea
    */
@@ -36,6 +36,10 @@ export interface TextareaProps {
    * On Input callback may be used as custom callback
    */
   onInput: (e: React.FormEvent<HTMLTextAreaElement>) => void;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 export interface TextAreaWrapperProps extends React.ComponentPropsWithoutRef<'div'> {
   variant: 'primary' | 'default';

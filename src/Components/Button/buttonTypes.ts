@@ -1,6 +1,6 @@
 import { colorVariant } from '../Title/titleType';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Right and Left Padding of button.
    */
@@ -78,6 +78,10 @@ export interface ButtonProps {
    * If true, sets accurate button height and width
    */
   accurateValues?: boolean;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface Props extends React.ComponentPropsWithoutRef<'button'> {

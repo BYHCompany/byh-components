@@ -1,7 +1,7 @@
 export type sizeTypes = 'ultraSmall' | 'small' | 'medium' | 'large' | 'ultraLarge';
 export type colorVariant = 'primary' | 'secondary' | 'default';
 
-export type TitleProps = {
+export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Text for the title
    */
@@ -20,6 +20,10 @@ export type TitleProps = {
    */
   fontWeight?: number;
   customVariantColor?: string;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 };
 
 export interface TitleWrapperPros extends React.ComponentPropsWithoutRef<'div'> {

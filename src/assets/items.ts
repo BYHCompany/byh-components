@@ -1,4 +1,4 @@
-import { StepperElement } from './StepperTypes';
+import { StepperElement } from '../Components/Stepper/StepperTypes';
 
 export const doneItems: StepperElement[] = [
   { id: 'dsjhtfs67u', value: 'string' },

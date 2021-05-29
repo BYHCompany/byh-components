@@ -10,6 +10,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   fontSize,
   defVariant = 'default',
   callback,
+  ...props
 }) => {
   const [clicked, setClicked] = React.useState<string>();
   let calcButtonWidth = width / buttons.length;
@@ -23,7 +24,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   };
 
   return (
-    <ButtonGroupWrapper data-testid="buttonGroupWrapper" height={height} width={width}>
+    <ButtonGroupWrapper {...props} data-testid="buttonGroupWrapper" height={height} width={width}>
       {buttons.map((button) => {
         i++;
         return (

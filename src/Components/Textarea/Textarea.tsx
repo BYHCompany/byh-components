@@ -12,6 +12,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   value,
   fontSize = 14,
   onInput,
+  ...props
 }): React.ReactElement => {
   const [inputHeight, setInputHeight] = useState<number | 'auto'>(height);
   const [inputLength, setInputLength] = useState(0);
@@ -27,6 +28,7 @@ export const Textarea: React.FC<TextareaProps> = ({
 
   return (
     <TextAreaWrapper
+      {...props}
       inputHeight={inputLength === 0 ? height : inputHeight}
       width={width}
       variant={variant}
