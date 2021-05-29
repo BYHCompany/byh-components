@@ -11,6 +11,10 @@ export interface PhotoProps {
    * Width of photo
    */
   width?: number;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 export interface PhotoWrapperProp extends React.ComponentPropsWithoutRef<'div'> {
   src: string;

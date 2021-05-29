@@ -32,6 +32,10 @@ export interface StepperProps {
    * Sets distance between steps in px
    */
   distanceBetweenSteps?: number;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }
 
 export interface StepperWrapperProps extends React.ComponentPropsWithoutRef<'div'> {

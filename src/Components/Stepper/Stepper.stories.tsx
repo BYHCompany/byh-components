@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 import React from 'react';
-import { doneItems, testArray } from './items';
+import { doneItems, testArray } from '../../assets/items';
 import { Stepper } from './Stepper';
 import { StepperProps } from './StepperTypes';
 

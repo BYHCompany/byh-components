@@ -17,4 +17,8 @@ export interface CheckBoxProps {
    * Width of the checkbox
    */
   width?: number;
+  /**
+   * Allows to set additional props
+   */
+  [x: string]: any;
 }

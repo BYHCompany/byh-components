@@ -46,17 +46,14 @@ export const UL = styled.ul<ULProps>`
   &::-webkit-scrollbar {
     width: 6px;
   }
-
   /* Track */
   &::-webkit-scrollbar-track {
     background: #ebebeb;
   }
-
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: #cacaca;
   }
-
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #8c8c8c;
@@ -74,6 +71,10 @@ export const Item = styled.li<LiProps>`
   margin-bottom: 2px;
   border-radius: ${({ lastElement }) => lastElement && '0 0 3px 3px'};
   cursor: pointer;
+
+  &:hover {
+    background-color: red;
+  }
 `;
 
 export const Aside = styled.aside<AsideProps>`

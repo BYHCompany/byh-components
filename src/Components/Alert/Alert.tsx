@@ -12,9 +12,11 @@ export const Alert: React.FC<AlertTypes> = ({
   width = 650,
   padding = 20,
   customIcon,
+  ...props
 }) => {
   return (
     <AlertWrapper
+      {...props}
       data-testid="alertWrapper"
       padding={padding}
       variant={variant}
