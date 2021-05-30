@@ -28,8 +28,13 @@ export interface PaperProps {
    */
   boxShadow?: boolean;
   /**
+   *custom BackGroundColor of paper
+   */
+  customBgColor: string;
+  /**
    * Allows to set additional props
    */
+
   [x: string]: any;
 }
 
@@ -40,4 +45,5 @@ export interface PaperWrapperProps extends React.ComponentPropsWithoutRef<'div'>
   maxWidth?: number;
   boxShadow?: boolean;
   borderRadius?: string;
+  customBgColor: string;
 }

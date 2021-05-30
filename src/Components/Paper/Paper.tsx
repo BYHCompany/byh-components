@@ -10,11 +10,13 @@ export const Paper: React.FC<PaperProps> = ({
   children,
   boxShadow = true,
   borderRadius = '3px',
+  customBgColor,
   ...props
 }) => {
   return (
     <PaperWrapper
       {...props}
+      customBgColor={customBgColor}
       data-testid="paper"
       maxHeight={maxHeight}
       maxWidth={maxWidth}
