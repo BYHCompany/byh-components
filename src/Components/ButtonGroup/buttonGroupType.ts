@@ -8,7 +8,7 @@ export type buttonDif = {
   endIcon?: React.ReactNode;
 };
 
-export type ButtonGroupProps = {
+export interface ButtonGroupProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *expected array of objects all params: 
    label: string,(text of each button) |
