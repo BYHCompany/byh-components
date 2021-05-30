@@ -22,6 +22,7 @@
     "coverage": "jest --coverage --watchAll --env=jsdom",
     "predeploy": "npm run build-storybook"
   },
+
   "author": "BYH-Company <byhcomp@gmail.com>",
   "license": "MIT",
   "devDependencies": {

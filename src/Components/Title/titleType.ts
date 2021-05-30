@@ -1,4 +1,5 @@
 export type sizeTypes = 'ultraSmall' | 'small' | 'medium' | 'large' | 'ultraLarge';
+
 export type colorVariant = 'primary' | 'secondary' | 'default';
 
 export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
@@ -7,7 +8,7 @@ export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
    */
   text: string;
   /**
-   *There are sizes which you can take, but also you can write your own
+   *There are sizes which you can take, ultraSmall = 24px, small = 30px, medium = 36px, large = 48px, ultraLarge = 60px
    */
   type?: sizeTypes;
 
