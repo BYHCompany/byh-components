@@ -4,7 +4,7 @@ export interface StyledCheckboxProps extends React.ComponentPropsWithoutRef<'div
   width?: number;
 }
 
-export interface CheckBoxProps {
+export interface CheckBoxProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * custom callback which takes value of checkbox (boolean)
    */

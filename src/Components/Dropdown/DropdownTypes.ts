@@ -4,7 +4,7 @@ export type ItemType = {
   id: string;
   value: any;
 };
-export interface DropdownProps {
+export interface DropdownProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Label property sets default label of dropdown
    */

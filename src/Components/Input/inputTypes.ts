@@ -1,6 +1,6 @@
 import { colorVariant } from '../Title/titleType';
 
-export interface InputProps {
+export interface InputProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Variant property sets common style of input
    */

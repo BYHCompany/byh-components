@@ -2,7 +2,7 @@ export type sizeTypes = 'ultraSmall' | 'small' | 'medium' | 'large' | 'ultraLarg
 
 export type colorVariant = 'primary' | 'secondary' | 'default';
 
-export type TitleProps = {
+export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Text for the title
    */

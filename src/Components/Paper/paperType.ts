@@ -1,4 +1,4 @@
-export interface PaperProps {
+export interface PaperProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Height of paper, if (!height) height = 100%, if (!!maxHeight) height = 100%
    */
@@ -28,8 +28,13 @@ export interface PaperProps {
    */
   boxShadow?: boolean;
   /**
+   *custom BackGroundColor of paper
+   */
+  customBgColor: string;
+  /**
    * Allows to set additional props
    */
+
   [x: string]: any;
 }
 
@@ -40,4 +45,5 @@ export interface PaperWrapperProps extends React.ComponentPropsWithoutRef<'div'>
   maxWidth?: number;
   boxShadow?: boolean;
   borderRadius?: string;
+  customBgColor: string;
 }

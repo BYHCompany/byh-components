@@ -1,4 +1,4 @@
-export interface PhotoProps {
+export interface PhotoProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Photo src
    */
