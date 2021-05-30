@@ -45,5 +45,5 @@ export interface PaperWrapperProps extends React.ComponentPropsWithoutRef<'div'>
   maxWidth?: number;
   boxShadow?: boolean;
   borderRadius?: string;
-  customBgColor: string;
+  customBgColor?: string;
 }
