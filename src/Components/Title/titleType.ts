@@ -1,4 +1,5 @@
 export type sizeTypes = 'ultraSmall' | 'small' | 'medium' | 'large' | 'ultraLarge';
+
 export type colorVariant = 'primary' | 'secondary' | 'default';
 
 export type TitleProps = {
@@ -7,7 +8,7 @@ export type TitleProps = {
    */
   text: string;
   /**
-   *There are sizes which you can take, but also you can write your own
+   *There are sizes which you can take, ultraSmall = 24px, small = 30px, medium = 36px, large = 48px, ultraLarge = 60px
    */
   type?: sizeTypes;
 
