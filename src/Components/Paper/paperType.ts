@@ -30,7 +30,7 @@ export interface PaperProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *custom BackGroundColor of paper
    */
-  customBgColor: string;
+  customBgColor?: string;
   /**
    * Allows to set additional props
    */
