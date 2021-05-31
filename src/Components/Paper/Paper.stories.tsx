@@ -12,6 +12,12 @@ const Template: Story<PaperProps> = (args) => <Paper {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  height: 600,
-  width: 600,
+  children: (
+    <>
+      {' '}
+      <div style={{ padding: 20 }}>
+        <p>adoapodkapodkaopdkpaodadop</p>
+      </div>
+    </>
+  ),
 };

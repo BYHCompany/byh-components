@@ -32,6 +32,10 @@ export interface PaperProps extends React.HTMLAttributes<HTMLElement> {
    */
   customBgColor?: string;
   /**
+   *display of paper,
+   */
+  display?: string;
+  /**
    * Allows to set additional props
    */
 
@@ -46,4 +50,5 @@ export interface PaperWrapperProps extends React.ComponentPropsWithoutRef<'div'>
   boxShadow?: boolean;
   borderRadius?: string;
   customBgColor?: string;
+  display?: string;
 }
