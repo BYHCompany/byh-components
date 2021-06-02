@@ -4,7 +4,7 @@
 
 .slider {
   position: relative;
-  width: 200px;
+
   z-index: -1;
 }
 
@@ -54,7 +54,6 @@
   pointer-events: none;
   position: absolute;
   height: 0;
-  width: 200px;
   outline: none;
 }
 
