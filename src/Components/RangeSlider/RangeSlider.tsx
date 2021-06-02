@@ -2,7 +2,12 @@ import React, { ChangeEvent } from 'react';
 import './rangeSlider.css';
 import { RangeSliderProps } from './rangeSliderType';
 
-export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, callback, ...props }) => {
+export const RangeSlider: React.FC<RangeSliderProps> = ({
+  min = 0,
+  max = 1000,
+  callback,
+  ...props
+}) => {
   const [minVal, setMinVal] = React.useState(min);
   const [maxVal, setMaxVal] = React.useState(max);
   const minValRef = React.useRef(min);

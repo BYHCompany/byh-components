@@ -17,7 +17,7 @@ export const List: React.FC<ListProps> = ({
   let fontWeight: number = 400;
 
   return (
-    <ul>
+    <ul {...props}>
       {list.map((item) => (
         <ListItemWrap data-testid={'list-wrapper'} fontSize={fontSize} key={item.id}>
           <ListItem

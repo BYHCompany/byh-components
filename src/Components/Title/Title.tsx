@@ -3,7 +3,7 @@ import { TextWrapper } from './TitleElements';
 import { TitleProps } from './titleType';
 
 export const Title: React.FC<TitleProps> = ({
-  variant = 'primary',
+  variant = 'default',
   text = 'text',
   type = 'small',
   fontWeight = 700,
