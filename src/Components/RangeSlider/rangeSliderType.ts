@@ -12,6 +12,10 @@ export interface RangeSliderProps extends React.HTMLAttributes<HTMLElement> {
    */
   callback: (minVal: number, maxVal: number) => void;
   /**
+   * Width of slider
+   */
+  width: number;
+  /**
    * Allows to set additional props
    */
   [x: string]: any;

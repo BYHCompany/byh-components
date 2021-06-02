@@ -5,6 +5,7 @@ import { RangeSliderProps } from './rangeSliderType';
 export const RangeSlider: React.FC<RangeSliderProps> = ({
   min = 0,
   max = 1000,
+  width = 200,
   callback,
   ...props
 }) => {
@@ -56,7 +57,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
         }}
         className="thumb thumb--left"
         //@ts-ignore
-        style={{ zIndex: minVal > max - 100 && '5' }}
+        style={{ zIndex: minVal > max - 100 && '5', width: width }}
       />
       <input
         type="range"
@@ -70,9 +71,10 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
           maxValRef.current = value;
         }}
         className="thumb thumb--right"
+        style={{ width: width }}
       />
 
-      <div className="slider">
+      <div className="slider" style={{ width: width }}>
         <div data-testid="slider__track" className="slider__track"></div>
         <div data-testid="slider__range" ref={range} className="slider__range"></div>
       </div>
