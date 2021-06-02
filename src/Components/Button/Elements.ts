@@ -45,7 +45,7 @@ export const ButtonTag = styled.button<Props>`
 export const ContentWrap = styled.div<IconProps>`
   color: ${({ iconColor }) => `${iconColor}`};
   display: flex;
-  align-items: cent;
+  align-items: center;
 `;
 export const LabelWrap = styled.div`
   padding: 0px 10px;

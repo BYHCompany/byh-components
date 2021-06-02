@@ -5,9 +5,9 @@ import { Button } from '../Button/Button';
 
 export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   buttons,
-  height,
-  width,
-  fontSize,
+  height = 30,
+  width = 300,
+  fontSize = 24,
   defVariant = 'default',
   callback,
   ...props
