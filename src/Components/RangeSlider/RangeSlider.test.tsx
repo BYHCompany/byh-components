@@ -13,7 +13,9 @@ describe('RangeSlider', () => {
   };
 
   const getSlider = (max?: number, min?: number) => {
-    return render(<RangeSlider max={max ? max : 1000} min={min ? min : 0} callback={callback} />);
+    return render(
+      <RangeSlider max={max ? max : 1000} min={min ? min : 0} callback={callback} width={300} />,
+    );
   };
   it('rangeSlider should be rendered in the document', () => {
     const { getByTestId } = getSlider();
@@ -62,5 +64,12 @@ describe('RangeSlider', () => {
 
     const sliderRange = getByTestId('slider__range');
     expect(sliderRange).toBeInTheDocument();
+  });
+  it('width of all slider should be correct ', () => {
+    const { getByTestId } = getSlider();
+    const sliderRange = getByTestId('slider');
+    expect(sliderRange).toHaveStyle({
+      width: '300px',
+    });
   });
 });
