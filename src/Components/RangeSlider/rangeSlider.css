@@ -4,17 +4,12 @@
 
 .slider {
   position: relative;
-
-  z-index: -1;
+  z-index: 0;
 }
 
 .slider__track,
 .slider__range {
   position: absolute;
-}
-
-.slider__track,
-.slider__range {
   border-radius: 3px;
   height: 5px;
 }

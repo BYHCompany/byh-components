@@ -42,9 +42,8 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
   callback && callback(minVal, maxVal);
 
   return (
-    <>
+    <div {...props} style={{ width: width }}>
       <input
-        {...props}
         data-testid="input-range-min"
         type="range"
         min={min}
@@ -74,10 +73,10 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
         style={{ width: width }}
       />
 
-      <div className="slider" style={{ width: width }}>
+      <div className="slider" data-testid="slider" style={{ width: width }}>
         <div data-testid="slider__track" className="slider__track"></div>
         <div data-testid="slider__range" ref={range} className="slider__range"></div>
       </div>
-    </>
+    </div>
   );
 };
