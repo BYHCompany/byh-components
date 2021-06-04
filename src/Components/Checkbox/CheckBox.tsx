@@ -1,22 +1,14 @@
-import { logDOM } from '@testing-library/dom';
 import React from 'react';
 import { CheckboxContainer, HiddenCheckbox, Icon, StyledCheckbox } from './CheckBoxElement';
 import { CheckBoxProps } from './checkboxType';
 
 export const CheckBox: React.FC<CheckBoxProps> = ({
-  callback,
   height = 24,
   width = 24,
+  onChangeHandler,
+  checked,
   ...props
 }) => {
-  const [checked, setChecked] = React.useState<boolean>(false);
-
-  const onChangeHandler = () => {
-    setChecked(!checked);
-  };
-
-  callback && callback(checked);
-
   return (
     <label {...props}>
       <CheckboxContainer data-testid="checkbox">
