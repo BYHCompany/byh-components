@@ -6,10 +6,6 @@ export interface StyledCheckboxProps extends React.ComponentPropsWithoutRef<'div
 
 export interface CheckBoxProps extends React.HTMLAttributes<HTMLElement> {
   /**
-   * custom callback which takes value of checkbox (boolean)
-   */
-  callback: (checked: boolean) => void;
-  /**
    * Height of the checkbox
    */
   height?: number;
@@ -17,6 +13,14 @@ export interface CheckBoxProps extends React.HTMLAttributes<HTMLElement> {
    * Width of the checkbox
    */
   width?: number;
+  /**
+   * Onchange function for the checkbox
+   */
+  onChangeHandler: () => void;
+  /**
+   * State of checkbox
+   */
+  checked: boolean;
   /**
    * Allows to set additional props
    */
