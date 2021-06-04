@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Aside, DIV, Item, LabelDiv, UL } from './Elements';
 import { IoIosArrowDown } from 'react-icons/io';
 import { DropdownProps } from './DropdownTypes';
@@ -42,6 +42,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
     callback && callback(noneObj);
   };
 
+  const autoItemsHeight = height * items.length;
+
   return (
     <DIV {...props} width={width}>
       <LabelDiv
@@ -60,7 +62,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
       </LabelDiv>
       {visible && (
         <Aside width={width}>
-          <UL itemsScrollHeight={itemsScrollHeight}>
+          <UL
+            itemsScrollHeight={
+              itemsScrollHeight > autoItemsHeight ? autoItemsHeight : itemsScrollHeight
+            }>
             <Item
               variant={variant}
               onClick={() => setNoneItem()}
@@ -76,6 +81,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
               i++;
               return (
                 <Item
+                  onBlur={() => setVisible(false)}
                   variant={variant}
                   onClick={() => itemClick(item)}
                   value={item.value}

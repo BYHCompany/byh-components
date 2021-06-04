@@ -1,5 +1,4 @@
-import { logDOM } from '@testing-library/dom';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckboxContainer, HiddenCheckbox, Icon, StyledCheckbox } from './CheckBoxElement';
 import { CheckBoxProps } from './checkboxType';
 
@@ -15,7 +14,9 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
     setChecked(!checked);
   };
 
-  callback && callback(checked);
+  useEffect(() => {
+    callback && callback(checked);
+  }, [checked]);
 
   return (
     <label {...props}>
