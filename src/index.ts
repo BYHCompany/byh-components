@@ -1,3 +1,4 @@
+import { Paginator } from './Components/Paginator/Paginator';
 import { Title } from './Components/Title/Title';
 import { Textarea } from './Components/Textarea/Textarea';
 import { Stepper } from './Components/Stepper/Stepper';
@@ -25,4 +26,5 @@ export {
   ButtonGroup,
   Button,
   Alert,
+  Paginator,
 };
