@@ -6,7 +6,15 @@ import { CheckBox } from './CheckBox';
 
 describe('CheckBox', () => {
   const getCheckbox = (height?: number, width?: number) => {
-    return render(<CheckBox callback={() => {}} height={height} width={width} />);
+    return render(
+      <CheckBox
+        checked={true}
+        onChangeHandler={() => {}}
+        callback={() => {}}
+        height={height}
+        width={width}
+      />,
+    );
   };
 
   it('Checkbox should be rendered i the document', () => {
