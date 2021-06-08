@@ -13,30 +13,17 @@ export const Input: React.FC<InputProps> = ({
   startIcon = null,
   endIcon = null,
   isIconWrapperTransparent = false,
-  value,
   fullwidth = false,
-  callback,
-  inputFieldProps,
-  inputBlockProps,
   ...props
 }): React.ReactElement => {
-  const [inputValue, setInputValue] = useState<string>(value ? value : '');
-
-  const change = (e: React.FormEvent<HTMLInputElement>) => {
-    setInputValue(e.currentTarget.value);
-    callback && callback(e);
-  };
-
   return (
     <InputArea
-      {...props}
       fullwidth={fullwidth}
       variant={variant}
       width={width}
       opacity={opacity}
       height={height}
-      data-testid="inputArea"
-      {...inputBlockProps}>
+      data-testid="inputArea">
       {startIcon || endIcon ? (
         <>
           {startIcon && (
@@ -51,15 +38,13 @@ export const Input: React.FC<InputProps> = ({
           <InputContent paddingsHorizontal={paddingsHorizontal}>
             <InputField
               fullwidth={fullwidth}
-              onChange={change}
-              value={inputValue}
               variant={variant}
               height={height}
               paddingsHorizontal={paddingsHorizontal}
               width={width}
               placeholder={placeholder}
               fontSize={fontSize}
-              {...inputFieldProps}
+              {...props}
             />
           </InputContent>
           {endIcon && (
@@ -76,14 +61,13 @@ export const Input: React.FC<InputProps> = ({
         <InputContent paddingsHorizontal={paddingsHorizontal}>
           <InputField
             fullwidth={fullwidth}
-            onChange={change}
-            value={value}
             variant={variant}
             paddingsHorizontal={paddingsHorizontal}
             height={height}
             width={width}
             placeholder={placeholder}
             fontSize={fontSize}
+            {...props}
           />
         </InputContent>
       )}
