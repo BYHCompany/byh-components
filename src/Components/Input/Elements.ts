@@ -24,6 +24,7 @@ export const InputField = styled.input<InputFieldProps>`
   border: none;
   background-color: transparent;
   color: #000;
+  font-weight: 700;
 
   &::placeholder {
     opacity: 1;
