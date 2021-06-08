@@ -53,6 +53,14 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
    * Allows to set additional props
    */
   [x: string]: any;
+  /**
+   * Props to Controller (React Hook Form)
+   */
+  formProps?: any;
+  /**
+   * Callback returns field State
+   */
+  formCallback?: any;
 }
 
 // Types for styled components

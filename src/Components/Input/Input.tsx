@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useController } from 'react-hook-form';
 import { InputArea, InputField, InputContent, IconWrapper } from './Elements';
 import { InputProps } from './inputTypes';
 
@@ -15,8 +16,16 @@ export const Input: React.FC<InputProps> = ({
   isIconWrapperTransparent = false,
   fullwidth = false,
   className,
+  formProps,
+  formCallback,
   ...props
 }): React.ReactElement => {
+  const { field, fieldState } = useController<any>(formProps);
+
+  useState(() => {
+    formCallback && formCallback(fieldState);
+  });
+
   return (
     <InputArea
       className={className}
@@ -46,7 +55,7 @@ export const Input: React.FC<InputProps> = ({
               width={width}
               placeholder={placeholder}
               fontSize={fontSize}
-              {...props}
+              {...field}
             />
           </InputContent>
           {endIcon && (
