@@ -18,6 +18,10 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
    */
   height?: number;
   /**
+   * Sets className on input's div (wrapper)
+   */
+  className: string;
+  /**
    * Paddings Horizontal property sets input horizontal paddings between input and other elements
    */
   paddingsHorizontal?: number;
@@ -45,22 +49,6 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
    * Icon Wrapper Transparency do transparent icon wrapper
    */
   isIconWrapperTransparent?: boolean;
-  /**
-   * Value sets input value (controlled component)
-   */
-  value: string;
-  /**
-   * Allows to set own onChange callback (gets event)
-   */
-  callback: (e: React.FormEvent<HTMLInputElement>) => void;
-  /**
-   * Sets props to "input" element
-   */
-  inputFieldProps?: {};
-  /**
-   * Sets props to "div" element of all input
-   */
-  inputBlockProps?: {};
   /**
    * Allows to set additional props
    */
