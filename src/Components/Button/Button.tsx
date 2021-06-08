@@ -11,7 +11,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'default',
   startIcon,
   endIcon,
-  label,
+  children,
   fontSize = 14,
   shadow = false,
   height = 40,
@@ -56,14 +56,14 @@ export const Button: React.FC<ButtonProps> = ({
           <ContentWrap iconColor={iconColor} data-testid="startIcon">
             {startIcon}
           </ContentWrap>
-          <LabelWrap>{label}</LabelWrap>
+          <LabelWrap>{children}</LabelWrap>
           <ContentWrap iconColor={iconColor} data-testid="endIcon">
             {endIcon}
           </ContentWrap>
         </ButtonContent>
       ) : (
         <ButtonContent>
-          <LabelWrap data-testid="labelTest">{label} </LabelWrap>
+          <LabelWrap data-testid="labelTest">{children} </LabelWrap>
         </ButtonContent>
       )}
     </ButtonTag>

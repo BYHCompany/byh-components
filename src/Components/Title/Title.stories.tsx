@@ -12,7 +12,7 @@ const Template: Story<TitleProps> = (args) => <Title {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  text: 'Primary Title',
+  children: 'asdasd',
   type: 'medium',
   variant: 'primary',
 };

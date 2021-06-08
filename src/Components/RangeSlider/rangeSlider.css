@@ -4,7 +4,7 @@
 
 .slider {
   position: relative;
-  z-index: 0;
+  z-index: -1;
 }
 
 .slider__track,
@@ -22,7 +22,7 @@
 
 .slider__range {
   background-color: #072832;
-  z-index: 2;
+  z-index: 1;
 }
 
 .slider__left-value,
@@ -56,7 +56,6 @@
   background-color: #072832;
   border: none;
   border-radius: 50%;
-
   cursor: pointer;
   height: 18px;
   width: 18px;
@@ -74,10 +73,9 @@
 }
 
 .thumb::-moz-range-thumb {
-  background-color: #f1f5f7;
+  background-color: #072832;
   border: none;
   border-radius: 50%;
-
   cursor: pointer;
   height: 18px;
   width: 18px;

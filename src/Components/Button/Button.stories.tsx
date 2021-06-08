@@ -14,7 +14,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
-  label: 'Primary Button',
+  children: 'Primary Button',
   paddingHorizontal: 30,
   paddingVertical: 15,
   fontSize: 20,
@@ -25,7 +25,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Secondary Button',
+  children: 'Secondary Button',
   variant: 'secondary',
   paddingHorizontal: 25,
   paddingVertical: 15,
@@ -36,7 +36,7 @@ Secondary.args = {
 };
 export const WithoutIcons = Template.bind({});
 WithoutIcons.args = {
-  label: 'Secondary Button',
+  children: 'Secondary Button',
   variant: 'secondary',
   paddingHorizontal: 25,
   paddingVertical: 15,
@@ -58,7 +58,7 @@ Tags.args = {
 };
 export const ColoredButton = Template.bind({});
 ColoredButton.args = {
-  label: 'ColoredButton',
+  children: 'ColoredButton',
   customBgColor: '#99bfe3',
   customFontColor: 'red',
   paddingHorizontal: 15,
