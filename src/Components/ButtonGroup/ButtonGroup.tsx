@@ -37,7 +37,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
               height={height}
               fontSize={fontSize}
               onClick={() => handleClick(button)}
-              label={button.label}
+              children={button.label}
               endIcon={button.endIcon}
               startIcon={button.startIcon}
               variant={clicked === button.id ? 'primary' : defVariant}

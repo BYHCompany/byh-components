@@ -6,7 +6,7 @@ export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Text for the title
    */
-  text: string;
+  children: React.ReactNode;
   /**
    *There are sizes which you can take, ultraSmall = 24px, small = 30px, medium = 36px, large = 48px, ultraLarge = 60px
    */
@@ -25,7 +25,7 @@ export interface TitleProps extends React.HTMLAttributes<HTMLElement> {
    * Allows to set additional props
    */
   [x: string]: any;
-};
+}
 
 export interface TitleWrapperPros extends React.ComponentPropsWithoutRef<'div'> {
   fontWeight?: number;

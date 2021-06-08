@@ -20,7 +20,9 @@ export const Accordion: React.FC<AccordionProps> = ({
         onClick={() => setIsOpen(!isOpen)}>
         <ButtonContentWrapper>
           <TitleWrapper>
-            <Title text={title} type="ultraSmall" customVariantColor="#000000" />
+            <Title type="ultraSmall" customVariantColor="#000000">
+              {title}
+            </Title>
           </TitleWrapper>
           {isOpen ? (
             <IoIosArrowUp style={{ fontSize: 20 }} />

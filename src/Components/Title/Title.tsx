@@ -4,7 +4,7 @@ import { TitleProps } from './titleType';
 
 export const Title: React.FC<TitleProps> = ({
   variant = 'default',
-  text = 'text',
+  children = 'text',
   type = 'small',
   fontWeight = 700,
   customVariantColor,
@@ -19,27 +19,27 @@ export const Title: React.FC<TitleProps> = ({
       variant={variant}>
       {(type === 'ultraSmall' && (
         <h5 style={{ fontSize: 24, fontWeight: fontWeight }} data-testid="h5">
-          {text}
+          {children}
         </h5>
       )) ||
         (type === 'small' && (
           <h4 style={{ fontSize: 30, fontWeight: fontWeight }} data-testid="h4">
-            {text}
+            {children}
           </h4>
         )) ||
         (type === 'medium' && (
           <h3 style={{ fontSize: 36, fontWeight: fontWeight }} data-testid="h3">
-            {text}
+            {children}
           </h3>
         )) ||
         (type === 'large' && (
           <h2 style={{ fontSize: 48, fontWeight: fontWeight }} data-testid="h2">
-            {text}
+            {children}
           </h2>
         )) ||
         (type === 'ultraLarge' && (
           <h1 style={{ fontSize: 60, fontWeight: fontWeight }} data-testid="h1">
-            {text}
+            {children}
           </h1>
         ))}
     </TextWrapper>

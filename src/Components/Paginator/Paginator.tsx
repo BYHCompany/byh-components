@@ -7,25 +7,25 @@ export const Paginator: React.FC<PaginatorProps> = ({
   allPagesCount,
   currentPage,
   callback,
-  buttonProps
+  buttonProps,
 }): React.ReactElement => {
   const pagesPack = 10;
   const [currentPageIndex, setCurrentPageIndex] = React.useState(currentPage);
 
   const parseCurrent = (): number => {
     if (currentPage <= pagesPack) {
-      return 0
+      return 0;
     }
 
     if (currentPageIndex > allPagesCount) {
-      throw new Error('No current page')
+      throw new Error('No current page');
     }
 
-    const arr = currentPage.toString().split('')
-    arr.pop()
-    const mappedArr = arr.map(Number).join('')
-    return parseInt(mappedArr)
-  }
+    const arr = currentPage.toString().split('');
+    arr.pop();
+    const mappedArr = arr.map(Number).join('');
+    return parseInt(mappedArr);
+  };
 
   const [currentPackage, setCurrentPackage] = React.useState<number>(parseCurrent());
   let startPos = pagesPack * currentPackage - 1;
@@ -45,7 +45,7 @@ export const Paginator: React.FC<PaginatorProps> = ({
 
   //Prev step
   if (endPos - currentPageIndex === pagesPack + 1) {
-    if(currentPackage !== 0) {
+    if (currentPackage !== 0) {
       setCurrentPackage((prev) => {
         return prev - 1;
       });
@@ -59,7 +59,7 @@ export const Paginator: React.FC<PaginatorProps> = ({
   }, [pagesArray, startPos, endPos]);
 
   if (currentPackage === 0) {
-    startPos = 1
+    startPos = 1;
   }
 
   React.useEffect(() => {
@@ -76,23 +76,24 @@ export const Paginator: React.FC<PaginatorProps> = ({
 
   const renderButton = (args: any, index: number) => (
     <Button
-    {...buttonProps}
+      {...buttonProps}
       key={index}
       fontSize={24}
       height={50}
       width={50}
       {...args}
-      onClick={() => clickHandler(index)}
-    />
+      onClick={() => clickHandler(index)}>
+      {args.children}
+    </Button>
   );
 
   return (
     <PaginatorWrapper>
       {pagesArray.map((item) => {
         if (item === currentPageIndex) {
-          return renderButton({ label: item, variant: 'primary' }, item);
+          return renderButton({ children: item, variant: 'primary' }, item);
         }
-        return renderButton({ label: item }, item);
+        return renderButton({ children: item }, item);
       })}
     </PaginatorWrapper>
   );

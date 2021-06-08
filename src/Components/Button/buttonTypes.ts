@@ -32,7 +32,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   /**
    *Main text of a button.
    */
-  label?: string;
+  children?: React.ReactNode;
   /**
    *Height of a button.
    */

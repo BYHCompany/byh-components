@@ -5,7 +5,6 @@ import { BiCheckDouble } from 'react-icons/bi';
 export const ListItemWrap = styled.div<ListItemWrapProps>`
   font-size: ${({ fontSize }) => `${fontSize}px`};
   display: flex;
-  align-items: center;
 `;
 export const ListItem = styled.li<ListItemProps>`
   cursor: pointer;
