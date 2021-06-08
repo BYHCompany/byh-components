@@ -14,10 +14,12 @@ export const Input: React.FC<InputProps> = ({
   endIcon = null,
   isIconWrapperTransparent = false,
   fullwidth = false,
+  className,
   ...props
 }): React.ReactElement => {
   return (
     <InputArea
+      className={className}
       fullwidth={fullwidth}
       variant={variant}
       width={width}
