@@ -15,8 +15,17 @@ export const Input: React.FC<InputProps> = ({
   isIconWrapperTransparent = false,
   fullwidth = false,
   className,
+  value,
+  onChange,
   ...props
 }): React.ReactElement => {
+  const [inputValue, setInputValue] = React.useState(value);
+
+  const onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setInputValue(e.currentTarget.value);
+    onChange && onChange(e);
+  };
+
   return (
     <InputArea
       className={className}
@@ -42,8 +51,10 @@ export const Input: React.FC<InputProps> = ({
               fullwidth={fullwidth}
               variant={variant}
               height={height}
+              value={inputValue}
               paddingsHorizontal={paddingsHorizontal}
               width={width}
+              onChange={onInputChange}
               placeholder={placeholder}
               fontSize={fontSize}
               {...props}
@@ -64,8 +75,10 @@ export const Input: React.FC<InputProps> = ({
           <InputField
             fullwidth={fullwidth}
             variant={variant}
+            value={inputValue}
             paddingsHorizontal={paddingsHorizontal}
             height={height}
+            onChange={onInputChange}
             width={width}
             placeholder={placeholder}
             fontSize={fontSize}
