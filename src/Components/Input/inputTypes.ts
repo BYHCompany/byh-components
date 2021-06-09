@@ -56,7 +56,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * On Change handle of input
    */
-  onChange?: () => {};
+  onChange?: (e: React.FormEvent<HTMLInputElement>) => {};
   /**
    * Allows to set additional props
    */
