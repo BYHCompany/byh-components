@@ -12,6 +12,7 @@ import { CheckBox } from './Components/Checkbox/CheckBox';
 import { ButtonGroup } from './Components/ButtonGroup/ButtonGroup';
 import { Button } from './Components/Button/Button';
 import { Alert } from './Components/Alert/Alert';
+import { DescriptionList } from './Components/DescriptionList/DescriptionList';
 export {
   Textarea,
   Title,
@@ -27,4 +28,5 @@ export {
   Button,
   Alert,
   Paginator,
+  DescriptionList,
 };
