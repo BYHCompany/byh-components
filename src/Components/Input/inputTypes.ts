@@ -50,6 +50,14 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
    */
   isIconWrapperTransparent?: boolean;
   /**
+   * Value of input
+   */
+  value?: string;
+  /**
+   * On Change handle of input
+   */
+  onChange?: () => {};
+  /**
    * Allows to set additional props
    */
   [x: string]: any;
