@@ -3,8 +3,6 @@ import { AlertTypes } from './AlertTypes';
 import { IoCheckmarkDone } from 'react-icons/io5';
 import { AlertTextWrapper, AlertWrapper } from './Elements';
 import { BsExclamationTriangleFill, BsFillExclamationCircleFill } from 'react-icons/bs';
-import { CheckBox } from '../Checkbox/CheckBox';
-import { logDOM } from '@testing-library/dom';
 
 export const Alert: React.FC<AlertTypes> = ({
   variant,

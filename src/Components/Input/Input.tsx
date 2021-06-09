@@ -1,4 +1,5 @@
 import React from 'react';
+import { Controller, useForm } from 'react-hook-form';
 import { InputArea, InputField, InputContent, IconWrapper } from './Elements';
 import { InputProps } from './inputTypes';
 
@@ -19,7 +20,7 @@ export const Input: React.FC<InputProps> = ({
   onChange,
   ...props
 }): React.ReactElement => {
-  const [inputValue, setInputValue] = React.useState(value);
+  const [inputValue, setInputValue] = React.useState(value || '');
 
   const onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     setInputValue(e.currentTarget.value);
