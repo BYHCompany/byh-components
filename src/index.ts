@@ -13,6 +13,7 @@ import { ButtonGroup } from './Components/ButtonGroup/ButtonGroup';
 import { Button } from './Components/Button/Button';
 import { Alert } from './Components/Alert/Alert';
 import { DescriptionList } from './Components/DescriptionList/DescriptionList';
+import { Accordion } from './Components/Accordion/Accordion';
 export {
   Textarea,
   Title,
@@ -29,4 +30,5 @@ export {
   Alert,
   Paginator,
   DescriptionList,
+  Accordion,
 };
