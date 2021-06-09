@@ -16,14 +16,14 @@ export const Input: React.FC<InputProps> = ({
   isIconWrapperTransparent = false,
   fullwidth = false,
   className,
-  formProps,
+  formProps = {},
   formCallback,
   ...props
 }): React.ReactElement => {
   const { field, fieldState } = useController<any>(formProps);
 
   useState(() => {
-    formCallback && formCallback(fieldState);
+    formProps && formCallback && formCallback(fieldState);
   });
 
   return (
