@@ -35,7 +35,7 @@ export interface TextareaProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * On Input callback may be used as custom callback
    */
-  onInput: (e: React.FormEvent<HTMLTextAreaElement>) => void;
+  onChange: any;
   /**
    * Allows to set additional props
    */
