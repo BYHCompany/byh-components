@@ -28,7 +28,6 @@ export const Textarea: React.FC<TextareaProps> = ({
 
   return (
     <TextAreaWrapper
-      {...props}
       inputHeight={inputLength === 0 ? height : inputHeight}
       width={width}
       variant={variant}
@@ -39,9 +38,10 @@ export const Textarea: React.FC<TextareaProps> = ({
         fontSize={fontSize}
         value={inputValue}
         inputHeight={inputLength === 0 ? height : inputHeight}
-        onChange={(e: React.FormEvent<HTMLTextAreaElement>) => userInput(e)}
+        onChange={userInput}
         placeholderColor={placeholderColor}
         placeholder={placeholder}
+        {...props}
       />
     </TextAreaWrapper>
   );
