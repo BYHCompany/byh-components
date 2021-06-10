@@ -4,6 +4,7 @@ import { AlertTextWrapperProps, AlertWrapperProps } from './AlertTypes';
 export const AlertWrapper = styled.div<AlertWrapperProps>`
   display: flex;
   max-width: ${({ width }) => `${width}px`};
+  width: '100%';
   height: ${({ height }) => `${height}px`};
   justify-content: center;
   align-items: center;
