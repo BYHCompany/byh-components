@@ -1,3 +1,4 @@
+import { Accordion } from './Components/Accordion/Accordion';
 import { Paginator } from './Components/Paginator/Paginator';
 import { Title } from './Components/Title/Title';
 import { Textarea } from './Components/Textarea/Textarea';
@@ -29,4 +30,5 @@ export {
   Alert,
   Paginator,
   DescriptionList,
+  Accordion,
 };
