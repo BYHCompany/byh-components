@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { Aside, DIV, Item, LabelDiv, UL } from './Elements';
+import React from 'react';
+import { Aside, DIV, Item, LabelDiv, MainItem, UL } from './Elements';
 import { IoIosArrowDown } from 'react-icons/io';
 import { DropdownProps } from './DropdownTypes';
 import { ItemType } from './DropdownTypes';
@@ -18,8 +18,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
   callback,
   ...props
 }) => {
-  const [visible, setVisible] = useState(false);
-  const [currentElem, setCurrentElem] = useState<string>();
+  const [visible, setVisible] = React.useState(false);
+  const [currentElem, setCurrentElem] = React.useState<string>();
   let i = 0;
 
   const noneObj = {
@@ -66,7 +66,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
             itemsScrollHeight={
               itemsScrollHeight > autoItemsHeight ? autoItemsHeight : itemsScrollHeight
             }>
-            <Item
+            <MainItem
               variant={variant}
               onClick={() => setNoneItem()}
               value={'none'}
@@ -76,12 +76,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
               lastElement={false}
               key={'universalKeyforDeffaultItem287346'}>
               ---
-            </Item>
+            </MainItem>
             {items.map((item: any) => {
               i++;
               return (
                 <Item
-                  onBlur={() => setVisible(false)}
                   variant={variant}
                   onClick={() => itemClick(item)}
                   value={item.value}

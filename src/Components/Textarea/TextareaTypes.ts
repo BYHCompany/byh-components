@@ -7,7 +7,7 @@ export interface TextareaProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Value sets textarea's value
    */
-  value: string;
+  value?: string;
   /**
    * Width property sets textarea's width
    */
@@ -35,7 +35,7 @@ export interface TextareaProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * On Input callback may be used as custom callback
    */
-  onInput: (e: React.FormEvent<HTMLTextAreaElement>) => void;
+  onChange?: any;
   /**
    * Allows to set additional props
    */
@@ -51,7 +51,6 @@ export interface TextAreaWrapperProps extends React.ComponentPropsWithoutRef<'di
 export interface TextareaInputProps extends React.ComponentPropsWithoutRef<'textarea'> {
   placeholderColor: string;
   inputHeight: number | 'auto';
-  value: string;
   fontSize: number;
   padding: number;
 }

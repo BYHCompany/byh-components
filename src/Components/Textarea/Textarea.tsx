@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { TextareaInput, TextAreaWrapper } from './Elements';
 import { TextareaProps } from './TextareaTypes';
 
@@ -11,7 +11,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   placeholderColor = '#8C8C8C',
   value,
   fontSize = 14,
-  onInput,
+  onChange,
   ...props
 }): React.ReactElement => {
   const [inputHeight, setInputHeight] = useState<number | 'auto'>(height);
@@ -23,12 +23,11 @@ export const Textarea: React.FC<TextareaProps> = ({
     setInputValue(e.currentTarget.value);
     setInputHeight(e.currentTarget.scrollHeight + 2 * padding);
     setInputLength(e.currentTarget.value.length);
-    onInput && onInput(e);
+    onChange && onChange(e);
   };
 
   return (
     <TextAreaWrapper
-      {...props}
       inputHeight={inputLength === 0 ? height : inputHeight}
       width={width}
       variant={variant}
@@ -39,9 +38,10 @@ export const Textarea: React.FC<TextareaProps> = ({
         fontSize={fontSize}
         value={inputValue}
         inputHeight={inputLength === 0 ? height : inputHeight}
-        onInput={(e: React.FormEvent<HTMLTextAreaElement>) => userInput(e)}
+        onChange={userInput}
         placeholderColor={placeholderColor}
         placeholder={placeholder}
+        {...props}
       />
     </TextAreaWrapper>
   );
