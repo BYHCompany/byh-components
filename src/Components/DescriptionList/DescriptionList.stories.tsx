@@ -10,15 +10,6 @@ const Template: Story<DescriptionListProps> = (args) => <DescriptionList {...arg
 
 export const Main = Template.bind({});
 Main.args = {
-  obj: {
-    Kris: 'asdasd',
-    asdasd: 'asdasd',
-    vcvv: 'asdasd',
-    nmg: 'asdasd',
-    rsc: 'asdasd',
-    mhj: 'asdasd',
-    ppdd: 'asdasd',
-    bvvx: 'asdasd',
-    pppf: 'asdasd',
-  },
+  description: 'sdldldll',
+  header: ',c,cd',
 };

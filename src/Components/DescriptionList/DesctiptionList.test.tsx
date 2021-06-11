@@ -5,7 +5,7 @@ import { DescriptionList } from './DescriptionList';
 
 describe('DescriptionList', () => {
   const getDescriptionList = () => {
-    return render(<DescriptionList width={300} value="2020" key="Год" />);
+    return render(<DescriptionList width={300} description="2020" header="Год" />);
   };
   it('DescriptionList should be rendered in the document', () => {
     const { getByTestId } = getDescriptionList();
