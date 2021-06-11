@@ -1,0 +1,26 @@
+@keyframes switchRight {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(36px);
+  }
+}
+
+@keyframes switchLeft {
+  0% {
+    transform: translateX(36px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.translate__right {
+  animation: switchRight 0.3s ease-in-out 1;
+}
+
+.translate__left {
+  animation-fill-mode: forwards;
+  animation: switchLeft 0.3s ease-in-out 1;
+}
