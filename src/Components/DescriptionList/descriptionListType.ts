@@ -1,9 +1,28 @@
 export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> {
+  /**
+   * Font size of each item in list
+   */
   fontSize?: number;
+  /**
+   * Width of all list
+   */
   width?: number;
-  obj: any;
+  /**
+   * Second part of list
+   */
+  value?: string | number;
+  /**
+   * Parm for hide second part of list
+   */
   hide?: boolean;
+  /**
+   * Callback for hiding
+   */
   handleHide?: () => void;
+  /**
+   * First part of list
+   */
+  key: string;
 }
 
 export interface dlProps extends React.ComponentPropsWithoutRef<'dl'> {
