@@ -10,7 +10,7 @@ export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> 
   /**
    * Second part of list
    */
-  value?: string | number;
+  description: string | number;
   /**
    * Parm for hide second part of list
    */
@@ -22,7 +22,7 @@ export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> 
   /**
    * First part of list
    */
-  key: string;
+  header: string;
 }
 
 export interface dlProps extends React.ComponentPropsWithoutRef<'dl'> {

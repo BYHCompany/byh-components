@@ -5,16 +5,16 @@ import { DescriptionListProps } from './descriptionListType';
 export const DescriptionList: React.FC<DescriptionListProps> = ({
   fontSize = 24,
   width = 500,
-  value = 'value',
+  description = 'value',
   hide = false,
   handleHide,
-  key = 'key',
+  header,
 }) => {
   return (
     <StyleDL data-testid="styleDl" width={width} fontSize={fontSize}>
       <ItemWrapper data-testid="item-wrapper">
-        <StyleDT style={{ marginRight: 30 }}>{key}</StyleDT>
-        {hide ? <ShowDD onClick={handleHide}>Показать</ShowDD> : <StyleDD>{value}</StyleDD>}
+        <StyleDT style={{ marginRight: 30 }}>{header}</StyleDT>
+        {hide ? <ShowDD onClick={handleHide}>Показать</ShowDD> : <StyleDD>{description}</StyleDD>}
       </ItemWrapper>
     </StyleDL>
   );
