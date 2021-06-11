@@ -1,6 +1,6 @@
 {
   "name": "byh-components",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "This is React open-source UI component library that was developed by BroadenYourHorizons Company.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
