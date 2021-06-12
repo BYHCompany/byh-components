@@ -22,6 +22,7 @@ export const TextareaInput = styled.textarea<TextareaInputProps>`
   outline: none;
   border: none;
   font-size: ${({ fontSize }) => `${fontSize}px`};
+  font-weight: 700;
 
   &::placeholder {
     color: ${({ placeholderColor }) => placeholderColor};

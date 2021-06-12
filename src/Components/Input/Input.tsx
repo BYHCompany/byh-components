@@ -14,7 +14,7 @@ export const Input: React.FC<InputProps> = ({
   endIcon = null,
   isIconWrapperTransparent = false,
   fullwidth = false,
-  className,
+  className = '',
   value,
   onChange,
   ...props
