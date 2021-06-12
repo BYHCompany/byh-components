@@ -22,7 +22,7 @@ export interface TogglerProps {
   /**
    * Additional props for Toggler wrapper
    */
-  props: any;
+  props?: any;
 }
 
 export interface TogglerSwitcherWrapperTypes extends React.ComponentPropsWithoutRef<'div'> {
