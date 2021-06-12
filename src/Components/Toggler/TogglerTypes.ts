@@ -19,6 +19,10 @@ export interface TogglerProps {
    * Sets paddings of toggler
    */
   padding?: number;
+  /**
+   * Additional props for Toggler wrapper
+   */
+  props: any;
 }
 
 export interface TogglerSwitcherWrapperTypes extends React.ComponentPropsWithoutRef<'div'> {
