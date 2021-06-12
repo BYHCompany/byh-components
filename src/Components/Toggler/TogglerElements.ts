@@ -1,5 +1,9 @@
 import styled, { css, keyframes } from 'styled-components';
-import { TogglerBackgroundTypes, TogglerSwitcherTypes, TogglerSwitcherWrapperTypes } from './TogglerTypes';
+import {
+  TogglerBackgroundTypes,
+  TogglerSwitcherTypes,
+  TogglerSwitcherWrapperTypes,
+} from './TogglerTypes';
 
 export const moveRight = (x: number) => keyframes`
   0% {
@@ -8,7 +12,7 @@ export const moveRight = (x: number) => keyframes`
   100% {
     transform: translateX(${x}px);
   }
-`
+`;
 
 export const moveLeft = (x: number) => keyframes`
   0% {
@@ -17,23 +21,23 @@ export const moveLeft = (x: number) => keyframes`
   100% {
     transform: none;
   }
-`
+`;
 
 export const translateRight = (x: number) => css`
   animation: ${moveRight(x)} 0.3s ease-in-out 1;
   animation-fill-mode: forwards;
-`
+`;
 
 export const translateLeft = (x: number) => css`
   animation: ${moveLeft(x)} 0.3s ease-in-out 1;
   animation-fill-mode: forwards;
-`
+`;
 
 export const TogglerWrapper = styled.div<TogglerSwitcherWrapperTypes>`
   display: flex;
   width: ${({ width }) => `${width}px`};
   height: ${({ height }) => `${height}px`};
-  align-items: center
+  align-items: center;
 `;
 
 export const TogglerBackground = styled.label<TogglerBackgroundTypes>`
@@ -52,5 +56,6 @@ export const TogglerSwitcher = styled.div<TogglerSwitcherTypes>`
   border-radius: 50px;
   background-color: ${({ isChecked }) => (isChecked ? `#ffffff` : `#072832`)};
   transition: all 0.2s ease-in-out;
-  ${({ move, distance }) => move === 'ŗight' && translateRight(distance) || move === 'left' && translateLeft(distance)}
+  ${({ move, distance }) =>
+    (move === 'ŗight' && translateRight(distance)) || (move === 'left' && translateLeft(distance))}
 `;
