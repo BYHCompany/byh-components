@@ -8,6 +8,7 @@ export const Toggler: React.FC<TogglerProps> = ({
   height = 44,
   width = 80,
   padding = 4,
+  ...props
 }): React.ReactElement => {
   const [isChecked, setChecked] = React.useState(value);
   let isFirst = true;
@@ -22,7 +23,7 @@ export const Toggler: React.FC<TogglerProps> = ({
   };
 
   return (
-    <TogglerWrapper height={height} width={width}>
+    <TogglerWrapper {...props} height={height} width={width}>
       <TogglerBackground
         padding={padding}
         isChecked={isChecked}

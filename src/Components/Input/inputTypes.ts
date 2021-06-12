@@ -20,7 +20,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Sets className on input's div (wrapper)
    */
-  className: string;
+  className?: string;
   /**
    * Paddings Horizontal property sets input horizontal paddings between input and other elements
    */
