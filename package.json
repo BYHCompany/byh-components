@@ -81,7 +81,5 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "dependencies": {
-    "react-hook-form": "^7.8.3"
-  }
+  "dependencies": {}
 }
