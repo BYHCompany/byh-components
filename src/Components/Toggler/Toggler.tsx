@@ -7,23 +7,28 @@ export const Toggler: React.FC<TogglerProps> = ({
   onChange,
   height = 44,
   width = 80,
-  padding = 4
+  padding = 4,
+  ...props
 }): React.ReactElement => {
   const [isChecked, setChecked] = React.useState(value);
-  let isFirst = true
+  let isFirst = true;
 
-  const switcherWidthAndHeight = height - (2 * padding)
-  const transformDistance = width - height
+  const switcherWidthAndHeight = height - 2 * padding;
+  const transformDistance = width - height;
 
   const toggleSwitch = () => {
-    isFirst = false
+    isFirst = false;
     setChecked(!isChecked);
     onChange && onChange(!isChecked);
   };
 
   return (
-    <TogglerWrapper height={height} width={width} >
-      <TogglerBackground padding={padding} isChecked={isChecked} onClick={toggleSwitch} htmlFor="toggleSwitch">
+    <TogglerWrapper {...props} height={height} width={width}>
+      <TogglerBackground
+        padding={padding}
+        isChecked={isChecked}
+        onClick={toggleSwitch}
+        htmlFor="toggleSwitch">
         <TogglerSwitcher
           heightAndWidth={switcherWidthAndHeight}
           move={isFirst && isChecked ? 'ŗight' : 'left'}
