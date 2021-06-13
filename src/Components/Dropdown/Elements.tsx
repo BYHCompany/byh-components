@@ -60,7 +60,7 @@ export const UL = styled.ul<ULProps>`
   }
 `;
 
-export const MainItem = styled.input<LiProps>`
+export const MainItem = styled.div<LiProps>`
   width: 100%;
   height: ${({ height }) => `${height}px`};
   background-color: #efefef;
