@@ -1,6 +1,6 @@
 {
   "name": "byh-components",
-  "version": "1.0.23",
+  "version": "1.0.26",
   "description": "React open-source UI component library that was developed by BroadenYourHorizons Company.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -81,5 +81,11 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "dependencies": {}
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
 }

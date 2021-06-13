@@ -57,6 +57,7 @@ export interface DropdownProps extends React.HTMLAttributes<HTMLElement> {
 
 export interface DIVProps extends React.ComponentPropsWithoutRef<'div'> {
   width: number;
+  ref: any;
 }
 
 export interface LiProps extends React.ComponentPropsWithoutRef<'li'> {
