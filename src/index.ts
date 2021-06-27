@@ -1,3 +1,4 @@
+import { Toggler } from './Components/Toggler/Toggler';
 import { Accordion } from './Components/Accordion/Accordion';
 import { Paginator } from './Components/Paginator/Paginator';
 import { Title } from './Components/Title/Title';
@@ -31,4 +32,5 @@ export {
   Paginator,
   DescriptionList,
   Accordion,
+  Toggler,
 };

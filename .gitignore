@@ -21,3 +21,6 @@ coverage
 
 #NPM
 package-lock.json
+
+#GH-pages
+.docs

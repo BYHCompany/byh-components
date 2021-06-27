@@ -1,5 +1,4 @@
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
 import { InputArea, InputField, InputContent, IconWrapper } from './Elements';
 import { InputProps } from './inputTypes';
 
@@ -15,7 +14,7 @@ export const Input: React.FC<InputProps> = ({
   endIcon = null,
   isIconWrapperTransparent = false,
   fullwidth = false,
-  className,
+  className = '',
   value,
   onChange,
   ...props
