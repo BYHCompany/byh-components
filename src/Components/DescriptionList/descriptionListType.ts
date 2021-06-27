@@ -23,6 +23,10 @@ export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> 
    * First part of list
    */
   header: string;
+  /**
+   * text of show button
+   */
+  showButtonText?: string | React.ReactNode;
 }
 
 export interface dlProps extends React.ComponentPropsWithoutRef<'dl'> {
