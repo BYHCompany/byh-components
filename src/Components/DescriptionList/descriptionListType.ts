@@ -10,7 +10,7 @@ export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> 
   /**
    * Second part of list
    */
-  description: string | number;
+  description: string | number | React.ReactNode | React.ReactElement;
   /**
    * Parm for hide second part of list
    */
