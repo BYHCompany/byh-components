@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Aside, DIV, Item, LabelDiv, MainItem, UL } from './Elements';
 import { IoIosArrowDown } from 'react-icons/io';
 import { DropdownProps } from './DropdownTypes';
@@ -44,8 +44,29 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const autoItemsHeight = height * items.length;
 
+  const dropdownRef = useRef();
+
+  React.useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event: any) {
+      // @ts-ignore
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setVisible(false);
+      }
+    }
+
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <DIV {...props} width={width}>
+    <DIV ref={dropdownRef} {...props} width={width}>
       <LabelDiv
         customBorder={customBorder}
         isItemsVisible={visible}
