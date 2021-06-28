@@ -1,15 +1,24 @@
 .container {
+  height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider {
   position: relative;
-  z-index: 2;
+  width: 200px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+  position: absolute;
 }
 
 .slider__track,
 .slider__range {
-  position: absolute;
   border-radius: 3px;
   height: 5px;
 }
@@ -22,12 +31,12 @@
 
 .slider__range {
   background-color: #072832;
-  z-index: 1;
+  z-index: 2;
 }
 
 .slider__left-value,
 .slider__right-value {
-  color: #072832;
+  color: #dee2e6;
   font-size: 12px;
   margin-top: 20px;
 }
@@ -40,6 +49,7 @@
   right: -4px;
 }
 
+/* Removing the default appearance */
 .thumb,
 .thumb::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -49,9 +59,19 @@
   pointer-events: none;
   position: absolute;
   height: 0;
+  width: 200px;
   outline: none;
 }
 
+.thumb--left {
+  z-index: 3;
+}
+
+.thumb--right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
 .thumb::-webkit-slider-thumb {
   background-color: #072832;
   border: none;
@@ -64,14 +84,7 @@
   position: relative;
 }
 
-.thumb--left::-webkit-slider-thumb {
-  z-index: 3;
-}
-
-.thumb--right::-webkit-slider-thumb {
-  z-index: 4;
-}
-
+/* For Firefox browsers */
 .thumb::-moz-range-thumb {
   background-color: #072832;
   border: none;
@@ -82,12 +95,4 @@
   margin-top: 4px;
   pointer-events: all;
   position: relative;
-}
-
-.thumb--left::-moz-range-thumb {
-  z-index: 3;
-}
-
-.thumb--right::-moz-range-thumb {
-  z-index: 4;
 }
