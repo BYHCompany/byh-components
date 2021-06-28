@@ -4,7 +4,7 @@
 
 .slider {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .slider__track,
