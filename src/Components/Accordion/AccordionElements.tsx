@@ -8,7 +8,7 @@ export const AccordionButton = styled.button<AccordionButtonProps>`
   z-index: 1;
   width: ${({ width }) => width && `${width}px`};
   border-radius: ${({ isOpen }) => (isOpen ? '3px 3px 0 0' : '3px')};
-  height: 50px;
+  height: 45px;
 `;
 
 export const ButtonContentWrapper = styled.div`
