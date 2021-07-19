@@ -15,6 +15,18 @@ Test.args = {
       <li> Один</li>
       <li> Два</li>
       <li> Три</li>
+      <li> Один</li>
+      <li> Два</li>
+      <li> Три</li>
+      <li> Один</li>
+      <li> Два</li>
+      <li> Три</li>
+      <li> Один</li>
+      <li> Два</li>
+      <li> Три</li>
+      <li> Один</li>
+      <li> Два</li>
+      <li> Три</li>
     </ul>
   ),
 };
