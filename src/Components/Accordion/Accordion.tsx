@@ -36,7 +36,7 @@ export const Accordion: React.FC<AccordionProps> = ({
           boxShadow={false}
           borderRadius={'0 0 3px 3px'}
           customVariantColor={'#E9E9E9'}
-          style={{ padding: '15px 20px 15px 30px' }}
+          style={{ padding: '15px 10px 15px 30px' }}
           width={width}>
           {children}
         </Paper>
