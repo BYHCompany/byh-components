@@ -27,6 +27,8 @@ export interface DescriptionListProps extends React.HTMLAttributes<HTMLElement> 
    * text of show button
    */
   showButtonText?: string | React.ReactNode;
+
+  [x: string]: any;
 }
 
 export interface dlProps extends React.ComponentPropsWithoutRef<'dl'> {

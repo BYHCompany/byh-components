@@ -10,9 +10,10 @@ export const DescriptionList: React.FC<DescriptionListProps> = ({
   handleHide,
   showButtonText = 'Показать',
   header,
+  ...props
 }) => {
   return (
-    <StyleDL data-testid="styleDl" width={width} fontSize={fontSize}>
+    <StyleDL {...props} data-testid="styleDl" width={width} fontSize={fontSize}>
       <ItemWrapper data-testid="item-wrapper">
         <StyleDT>{header}</StyleDT>
         {hide ? (
