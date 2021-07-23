@@ -15,7 +15,6 @@ export const StyleDD = styled.dd<ddProps>`
 export const ItemWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 `;
 
 export const StyleDT = styled.dt`

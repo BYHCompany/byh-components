@@ -14,7 +14,7 @@ export const DescriptionList: React.FC<DescriptionListProps> = ({
   return (
     <StyleDL data-testid="styleDl" width={width} fontSize={fontSize}>
       <ItemWrapper data-testid="item-wrapper">
-        <StyleDT style={{ marginRight: 30 }}>{header}</StyleDT>
+        <StyleDT>{header}</StyleDT>
         {hide ? (
           <ShowDD onClick={handleHide}>{showButtonText}</ShowDD>
         ) : (
