@@ -9,6 +9,7 @@ export const AccordionButton = styled.button<AccordionButtonProps>`
   width: ${({ width }) => width && `${width}px`};
   border-radius: ${({ isOpen }) => (isOpen ? '3px 3px 0 0' : '3px')};
   height: 45px;
+  cursor: pointer;
 `;
 
 export const ButtonContentWrapper = styled.div`
