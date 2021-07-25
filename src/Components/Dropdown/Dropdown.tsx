@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Aside, DIV, Item, LabelDiv, MainItem, UL } from './Elements';
+import { Aside, DIV, Item, LabelDiv, UL } from './Elements';
 import { IoIosArrowDown } from 'react-icons/io';
 import { DropdownProps } from './DropdownTypes';
 import { ItemType } from './DropdownTypes';
@@ -20,13 +20,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const [visible, setVisible] = React.useState(false);
   const [currentElem, setCurrentElem] = React.useState<string>();
+  const [currentItems, setCurrentItems] = React.useState<ItemType[]>(items);
   let i = 0;
-
-  const noneObj = {
-    id: 'none',
-    label: 'none',
-    value: 'none',
-  } as ItemType;
 
   const handleClick = () => setVisible(!visible);
 
@@ -34,12 +29,6 @@ export const Dropdown: React.FC<DropdownProps> = ({
     setCurrentElem(item.label);
     setVisible(false);
     callback && callback(item);
-  };
-
-  const setNoneItem = () => {
-    setCurrentElem(label);
-    setVisible(false);
-    callback && callback(noneObj);
   };
 
   const autoItemsHeight = height * items.length;
@@ -65,6 +54,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
     };
   }, []);
 
+  React.useEffect(() => {
+    setCurrentItems(items);
+  }, [items]);
+
   return (
     <DIV ref={dropdownRef} {...props} width={width}>
       <LabelDiv
@@ -87,18 +80,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
             itemsScrollHeight={
               itemsScrollHeight > autoItemsHeight ? autoItemsHeight : itemsScrollHeight
             }>
-            <MainItem
-              variant={variant}
-              onClick={() => setNoneItem()}
-              value={'none'}
-              padding={padding}
-              itemsFontSize={itemsFontSize}
-              height={height}
-              lastElement={false}
-              key={'universalKeyforDeffaultItem287346'}>
-              ---
-            </MainItem>
-            {items.map((item: any) => {
+            {currentItems.map((item: any) => {
               i++;
               return (
                 <Item

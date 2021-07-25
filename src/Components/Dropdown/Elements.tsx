@@ -60,21 +60,7 @@ export const UL = styled.ul<ULProps>`
   }
 `;
 
-export const MainItem = styled.div<LiProps>`
-  width: 100%;
-  height: ${({ height }) => `${height}px`};
-  background-color: #efefef;
-  font-size: ${({ itemsFontSize }) => `${itemsFontSize}px`};
-  display: flex;
-  align-items: center;
-  padding: ${({ padding }) => `${padding}px`};
-  border-radius: ${({ lastElement }) => lastElement && '0 0 3px 3px'};
-  cursor: pointer;
 
-  &:hover {
-    background-color: #ffffff;
-  }
-`;
 
 export const Item = styled.li<LiProps>`
   width: 100%;
