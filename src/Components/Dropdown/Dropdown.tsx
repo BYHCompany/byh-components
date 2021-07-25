@@ -55,6 +55,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }, []);
 
   React.useEffect(() => {
+    setCurrentElem('');
     setCurrentItems(items);
   }, [items]);
 
