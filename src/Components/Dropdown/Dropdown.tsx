@@ -57,7 +57,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   React.useEffect(() => {
     setCurrentElem('');
     setCurrentItems(items);
-  }, [items]);
+  }, [currentElem]);
 
   return (
     <DIV ref={dropdownRef} {...props} width={width}>
