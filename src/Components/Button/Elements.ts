@@ -32,7 +32,7 @@ export const ButtonTag = styled.button<Props>`
 
   &:hover {
     background: ${({ variant, disabled }) =>
-      (disabled && null) ||
+      (disabled && '#EBEBEB') ||
       (variant === 'primary' && '#184c5c') ||
       (variant === 'secondary' && '#EBEBEB') ||
       (variant === 'default' && null)};
