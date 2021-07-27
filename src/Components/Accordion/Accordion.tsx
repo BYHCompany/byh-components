@@ -4,9 +4,9 @@ import { Paper } from '../Paper/Paper';
 import { Title } from '../Title/Title';
 import { AccordionButton, ButtonContentWrapper, TitleWrapper } from './AccordionElements';
 import { AccordionProps } from './accordionTypes';
-
+import { AnimatePresence, motion } from "framer-motion";
 export const Accordion: React.FC<AccordionProps> = ({
-  title = 'title',
+  title = "title",
   children = <h1>Content</h1>,
   width = 770,
   titleSize = 20,
@@ -20,10 +20,11 @@ export const Accordion: React.FC<AccordionProps> = ({
         data-testid="accordion-button"
         width={width}
         isOpen={isOpen}
-        onClick={() => setIsOpen(!isOpen)}>
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <ButtonContentWrapper>
           <TitleWrapper>
-            <h5 style={{ color: '#072832', fontSize: titleSize }}>{title}</h5>
+            <h5 style={{ color: "#072832", fontSize: titleSize }}>{title}</h5>
           </TitleWrapper>
           {isOpen ? (
             <IoIosArrowUp style={{ fontSize: 20 }} />
@@ -32,16 +33,23 @@ export const Accordion: React.FC<AccordionProps> = ({
           )}
         </ButtonContentWrapper>
       </AccordionButton>
-      {isOpen && (
-        <Paper
-          boxShadow={false}
-          borderRadius={'0 0 3px 3px'}
-          customVariantColor={'#E9E9E9'}
-          style={{ padding: '15px 10px 15px 30px' }}
-          width={width}>
-          {children}
-        </Paper>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            // boxShadow={false}
+            // borderRadius={"0 0 3px 3px"}
+            // customVariantColor={"#E9E9E9"}
+            // width={width}
+            style={{ padding: "15px 10px 15px 30px" }}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
