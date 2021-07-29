@@ -7,17 +7,26 @@ import { List } from './List';
 describe('List', () => {
   const list = [
     {
-      id: 'aksmdklmad',
+      id: 1,
       name: 'Abath',
     },
     {
-      id: 'nnnjsas',
+      id: 2,
       name: 'Alfa Romeo',
     },
   ];
 
   const getList = () => {
-    return render(<List list={list} callback={() => {}} fontSize={30} />);
+    const [clicked, setClicked] = React.useState<number>();
+    return render(
+      <List
+        list={list}
+        clicked={clicked}
+        setClicked={setClicked}
+        callback={() => {}}
+        fontSize={30}
+      />,
+    );
   };
 
   const getOneItem = (testId: string) => {
