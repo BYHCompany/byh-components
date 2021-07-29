@@ -25,7 +25,6 @@ ListExample.args = {
       id: '99xmzlfv',
       name: 'Alpina',
     },
-
     {
       id: 'jjjasrt',
       name: 'Aro',

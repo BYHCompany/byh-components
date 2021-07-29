@@ -4,27 +4,23 @@ import { ListContent, ListProps } from './listType';
 
 export const List: React.FC<ListProps> = ({
   list,
-  callback,
+  setClicked,
+  clicked,
   fontSize = 30,
   distanceBetweenLi = 10,
   ...props
 }) => {
-  const [clicked, setClicked] = useState<string>();
-  const onClick = (item: ListContent) => {
-    setClicked(item.id);
-    callback && callback(item);
-  };
   let fontWeight: number = 400;
 
   return (
     <ul {...props}>
       {list.map((item) => (
-        <ListItemWrap data-testid={'list-wrapper'} fontSize={fontSize} key={item.id}>
+        <ListItemWrap data-testid={'list-wrapper'} fontSize={fontSize} key={item.id.toString()}>
           <ListItem
             distanceBetweenLi={distanceBetweenLi}
             data-testid={'list'}
             fontWeight={clicked === item.id ? (fontWeight = 900) : (fontWeight = 400)}
-            onClick={() => onClick(item)}>
+            onClick={() => setClicked(item.id)}>
             {item.name}
           </ListItem>
           {clicked === item.id ? <ArrowIcon fontSize={fontSize} data-testid={'icon'} /> : null}
