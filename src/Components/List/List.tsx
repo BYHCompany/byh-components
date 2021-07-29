@@ -9,7 +9,7 @@ export const List: React.FC<ListProps> = ({
   distanceBetweenLi = 10,
   ...props
 }) => {
-  const [clicked, setClicked] = useState<string>();
+  const [clicked, setClicked] = useState<number>();
   const onClick = (item: ListContent) => {
     setClicked(item.id);
     callback && callback(item);
@@ -19,7 +19,7 @@ export const List: React.FC<ListProps> = ({
   return (
     <ul {...props}>
       {list.map((item) => (
-        <ListItemWrap data-testid={'list-wrapper'} fontSize={fontSize} key={item.id}>
+        <ListItemWrap data-testid={'list-wrapper'} fontSize={fontSize} key={item.id.toString()}>
           <ListItem
             distanceBetweenLi={distanceBetweenLi}
             data-testid={'list'}

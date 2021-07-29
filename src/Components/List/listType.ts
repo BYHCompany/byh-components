@@ -1,6 +1,6 @@
 export type ListContent = {
   name: string;
-  id: string;
+  id: number;
 };
 
 export interface ListProps extends React.HTMLAttributes<HTMLElement> {
